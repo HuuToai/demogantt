@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #EE3C59;
+  --secondary-color: #F9E2E5;
+  --background-color: #FFFFFF;
+  --text-color: #333333;
+  --hover-color: #D92A4A; /* Màu khi hover */
+}
+
+.nav-bar{
+  width: 320px;
+  height: calc(100% - 60px);
+  position: fixed;
+  left: 0;
+  transition: all ease 300ms;
+}
+
+.content-wrapper{
+  height: 100%;
+  margin-left: 320px;
+  flex: 1; /* Chiếm phần không gian còn lại */
+  /*background-color: #F9E2E5 ; !* Màu nền ví dụ *!*/
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.nav-content{
+  display: flex;
+  height: 100%;
+}
+
+.main{
+  height: 100%;
+  overflow: hidden;
+}
+.container-fluid.mt-3{
+  height: calc(100% - 60px);
+}
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    width: 200px; /* Thu hẹp chiều rộng trên màn hình nhỏ */
+  }
+
+  .content-wrapper {
+    margin-left: 200px; /* Điều chỉnh lại khoảng cách tương ứng */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-bar {
+    width: 100%; /* Chiều rộng toàn màn hình trên thiết bị nhỏ */
+    height: auto; /* Độ cao tự động theo nội dung */
+    position: relative; /* Không cố định nữa */
+  }
+
+  .content-wrapper {
+    margin-left: 0; /* Không cần khoảng cách */
+    margin-top: 20px; /* Thêm khoảng cách nếu cần */
+  }
+}
+
+/* chuyển navbar co giãn */
+.nav-bar.collapsed {
+  width: 70px; /* Khi co lại, chiều rộng sẽ giảm còn 70px */
+  padding-left: 0; /* Bỏ padding-left khi co lại */
+}
+
+.nav-bar i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.content-wrapper {
+  transition: margin-left 300ms ease, width 300ms ease; /* Thêm transition cho margin-left và width */
+  margin-left: 320px; /* Khoảng cách ban đầu khi nav-bar chưa bị co lại */
+}
+
+.content-wrapper.expanded {
+  margin-left: 70px; /* Khi nav-bar co lại, margin-left sẽ giảm còn 70px */
+  width: calc(100% - 70px); /* Giãn rộng content-wrapper khi nav-bar co lại */
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter, 
+.fade-leave-to {
+  opacity: 0;
+}
+
+
+.title-nav {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between; /* Chia đều khoảng cách: chữ bên trái, icon bên phải */
+  height: 50px; /* Chiều cao cố định cho header */
+}
+
+.title {
+  font-size: 16px; /* Kích thước chữ */
+  font-weight: bold; /* Đậm chữ */
+}
+
+.menu-icon {
+  font-size: 20px; /* Kích thước icon */
+  cursor: pointer; /* Thay đổi con trỏ khi hover */
+}
+/* chuyển navbar co giãn */

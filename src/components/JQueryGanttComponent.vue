@@ -613,30 +613,31 @@ export default {
       'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js',
 
       // Các plugin jQuery thêm
-      '/gantt/libs/jquery/jquery.livequery.1.1.1.min.js',
-      '/gantt/libs/jquery/jquery.timers.js',
+      'src/assets/gantt/libs/jquery/jquery.livequery.1.1.1.min.js',
+      'src/assets/gantt/libs/jquery/jquery.timers.js',
 
       // Thư viện hỗ trợ
-      '/gantt/libs/utilities.js',
-      '/gantt/libs/forms.js',
-      '/gantt/libs/date.js',
-      '/gantt/libs/dialogs.js',
-      '/gantt/libs/layout.js',
-      '/gantt/libs/i18nJs.js',
-      '/gantt/libs/jquery/dateField/jquery.dateField.js',
-      '/gantt/libs/jquery/JST/jquery.JST.js',
-      '/gantt/libs/jquery/valueSlider/jquery.mb.slider.js',
-      '/gantt/libs/jquery/svg/jquery.svg.min.js',
-      '/gantt/libs/jquery/svg/jquery.svgdom.1.8.js',
+      'src/assets/gantt/libs/utilities.js',
+      'src/assets/gantt/libs/forms.js',
+      'src/assets/gantt/libs/date.js',
+      'src/assets/gantt/libs/dialogs.js',
+      'src/assets/gantt/libs/layout.js',
+      'src/assets/gantt/libs/i18nJs.js',
+      'src/assets/gantt/libs/jquery/dateField/jquery.dateField.js',
+      'src/assets/gantt/libs/jquery/JST/jquery.JST.js',
+      'src/assets/gantt/libs/jquery/valueSlider/jquery.mb.slider.js',
+      'src/assets/gantt/libs/jquery/svg/jquery.svg.min.js',
+      'src/assets/gantt/libs/jquery/svg/jquery.svgdom.1.8.js',
 
       // Thư viện Gantt chính
-      '/gantt/ganttUtilities.js',
-      '/gantt/ganttTask.js',
-      '/gantt/ganttDrawerSVG.js',
-      '/gantt/ganttZoom.js',
-      '/gantt/ganttGridEditor.js',
-      '/gantt/ganttMaster.js',
-      '/gantt/diff_match_patch.js',
+      'src/assets/gantt/ganttUtilities.js',
+      'src/assets/gantt/ganttTask.js',
+      // '/gantt/ganttDrawerSVG.js',
+      'src/assets/gantt/ganttDrawerSVG.js',
+      'src/assets/gantt/ganttZoom.js',
+      'src/assets/gantt/ganttGridEditor.js',
+      'src/assets/gantt/ganttMaster.js',
+      'src/assets/gantt/diff_match_patch.js',
     ]
 
     const loadGanttScripts = async () => {
@@ -980,8 +981,7 @@ export default {
     }
 
     const addSubtask = (taskId) => {
-      alert('đã thêm task con')
-      return
+
       // Tìm task theo ID và thêm một task con
       const task = this.tasks.find((t) => t.id === taskId)
       if (task) {
